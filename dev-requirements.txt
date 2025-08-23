@@ -8,6 +8,8 @@ flake8
 bump2version
 Pillow
 Django
+django
 setuptools
 wheel
 twine
+git-cliff

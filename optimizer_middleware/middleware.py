@@ -1,8 +1,9 @@
 import os
+from io import BytesIO
+
 from django.conf import settings
 from django.core.files.uploadedfile import InMemoryUploadedFile
 from PIL import Image
-from io import BytesIO
 
 # On latter updates use the below and deprricate the resize_and_optimize function
 # from .utils import optimize_image
@@ -38,6 +39,11 @@ class ImageOptimizationMiddleware:
                         None,  # Encoding
                     )
                     request.FILES[field_name] = optimized_file  # Replace original file
+
+            if hasattr(request, "data") and isinstance(request.data, dict):
+                for field_name in request.FILES.keys():
+                    if field_name in request.data:
+                        request.data[field_name] = request.FILES[field_name]
 
         return self.get_response(request)
 
