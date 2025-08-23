@@ -13,3 +13,4 @@ wheel
 twine
 git-cliff
 djangorestframework
+bump2version

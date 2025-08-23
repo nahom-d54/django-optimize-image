@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.0] - 2025-08-23
+
+### Added
+
+- Add changelog configuration and update middleware to handle request data
+- Add djangorestframework to development requirements and tests
+
+### Changed
+
+- Update publish workflows to use 'python -m build' for package creation
+
+### Removed
+
+- Remove bump2version from development requirements
+
 ## [0.2.1] - 2025-08-23
 
 ### Changed
@@ -65,6 +80,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update README to link to LICENSE file
 - Set up packaging configuration for django-image-optimizer
 
+[0.3.0]: https://github.com/nahom-d54/django-image-optimizer/compare/v0.2.1..v0.3.0
 [0.2.1]: https://github.com/nahom-d54/django-image-optimizer/compare/v0.2.0..v0.2.1
 [0.2.0]: https://github.com/nahom-d54/django-image-optimizer/compare/v0.1.1..v0.2.0
 [0.1.1]: https://github.com/nahom-d54/django-image-optimizer/compare/v0.1.0..v0.1.1
