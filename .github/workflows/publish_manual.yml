@@ -8,7 +8,7 @@ on:
         default: "pypi"
 jobs:
   test:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-20.04
     strategy:
       matrix:
         python-version: [3.7.11, 3.8.0, 3.9.0, 3.10.0, 3.11.0, 3.12.0, 3.13.0]  # Python versions to test
@@ -28,7 +28,7 @@ jobs:
       - name: Run tests
         run: tox
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     needs: test
     permissions:
       contents: read
