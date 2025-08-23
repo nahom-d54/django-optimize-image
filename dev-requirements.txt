@@ -1,0 +1,13 @@
+pytest
+pytest-django
+tox
+pre-commit
+black
+isort
+flake8
+bump2version
+Pillow
+Django
+setuptools
+wheel
+twine
