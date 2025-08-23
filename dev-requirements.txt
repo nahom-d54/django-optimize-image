@@ -5,7 +5,6 @@ pre-commit
 black
 isort
 flake8
-bump2version
 Pillow
 Django
 django
