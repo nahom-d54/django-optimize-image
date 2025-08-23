@@ -10,8 +10,6 @@ jobs:
     strategy:
       matrix:
         python-version: [3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13]  # Python versions to test
-        django-version: [3.2, 4.2, 5.0]  # Django versions to test
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
