@@ -2,6 +2,8 @@
 
 A **Django middleware and utility** for optimizing uploaded images by converting them to WebP with configurable **width, height, and quality** settings.
 
+> *Fixed version, works with django-cabinet.*
+
 ## **Features**
 
 ✔ **Automatic optimization via middleware**  
@@ -14,7 +16,7 @@ A **Django middleware and utility** for optimizing uploaded images by converting
 ## **Installation**
 
 ```sh
-pip install django-image-optimizer
+pip install django-optimize-image
 ```
 
 Add the middleware:
