@@ -2,8 +2,6 @@
 
 A **Django middleware and utility** for optimizing uploaded images by converting them to WebP with configurable **width, height, and quality** settings.
 
-> *Fixed version, works with django-cabinet.*
-
 ## **Features**
 
 ✔ **Automatic optimization via middleware**  
