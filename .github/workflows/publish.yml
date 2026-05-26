@@ -29,15 +29,16 @@ jobs:
     needs: test
     permissions:
       contents: read
+      id-token: write
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: "3.9" # Change to your required version
+          python-version: "3.11"
 
       - name: Install Dependencies
         run: |
@@ -47,9 +48,5 @@ jobs:
       - name: Build the package
         run: python -m build --wheel --sdist
 
-      - name: Publish to PyPI
-        env:
-          TWINE_USERNAME: __token__
-          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
-        run: |
-          twine upload dist/*
+      - name: Publish to PyPI (Trusted Publishing)
+        uses: pypa/gh-action-pypi-publish@release/v1
