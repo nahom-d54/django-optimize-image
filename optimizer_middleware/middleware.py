@@ -35,7 +35,7 @@ class ImageOptimizationMiddleware:
                         field_name,  # Field name
                         os.path.splitext(file.name)[0] + ".webp",  # New filename
                         "image/webp",  # MIME type
-                        optimized_image.tell(),  # File size
+                        optimized_image.getbuffer().nbytes,  # File size
                         None,  # Encoding
                     )
                     request.FILES[field_name] = optimized_file  # Replace original file

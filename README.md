@@ -14,7 +14,7 @@ A **Django middleware and utility** for optimizing uploaded images by converting
 ## **Installation**
 
 ```sh
-pip install django-image-optimizer
+pip install django-optimize-image
 ```
 
 Add the middleware:
